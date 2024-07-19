@@ -21,6 +21,7 @@ unique_items = filtered_df['item'].drop_duplicates().sort_values()
 if len(unique_items) > 0:
     st.write('## Packing List')
     for item in unique_items:
+        cols = st.columns([3, 1])
         item_html = f"<span style='font-size:20px; font-weight:bold;'>{item}</span>"
         cols[0].markdown(item_html, unsafe_allow_html=True)
         cols[1].radio("", ['Non ancora', 'Preso','Non lo voglio'], key=item)
