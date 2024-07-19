@@ -25,5 +25,4 @@ if len(unique_items) > 0:
         cols[0].write(item)
         cols[1].radio("", ['Not taken yet', 'Taken', 'Don\'t want it'], key=item)
 else:
-    st.write('Select activities to see the packing list and go to the adventure 
-     😃')
+    st.write('Select activities to see the packing list and go to the adventure 😃')
