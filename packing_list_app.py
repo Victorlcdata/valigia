@@ -5,11 +5,11 @@ import pandas as pd
 database_df = pd.read_csv('database.csv')
 
 # Title
-st.title('Activity Packing List')
+st.title('Nella mia valigia 🧳')
 
 # Sidebar for activity selection
 activities = database_df['category'].unique()
-selected_activities = st.sidebar.multiselect('Select Activities', activities)
+selected_activities = st.sidebar.multiselect('Seleziona le attività', activities)
 
 # Filter items based on selected activities
 filtered_df = database_df[database_df['category'].isin(selected_activities)]
@@ -23,6 +23,6 @@ if len(unique_items) > 0:
     for item in unique_items:
         cols = st.columns([3, 1])
         cols[0].write(item)
-        cols[1].radio("", ['Not taken yet', 'Taken', 'Don\'t want it'], key=item)
+        cols[1].radio("", ['Non ancora', 'Preso','Non lo voglio'], key=item)
 else:
-    st.write('Select activities to see the packing list and go to the adventure 😃')
+    st.write('Selezionare le attività per vedere l'elenco dei bagagli e andare all'avventura 🤠')
