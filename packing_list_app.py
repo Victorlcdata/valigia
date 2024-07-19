@@ -25,4 +25,4 @@ if len(unique_items) > 0:
         cols[0].write(item)
         cols[1].radio("", ['Non ancora', 'Preso','Non lo voglio'], key=item)
 else:
-    st.write('Selezionare le attività per vedere l'elenco dei bagagli e andare all'avventura 🤠')
+    st.write('Selezionare le attività per vedere l\'elenco dei bagagli e andare all\'avventura 🤠')
